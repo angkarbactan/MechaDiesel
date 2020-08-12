@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Title_Scene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 1 )
+
+[node name="Title_Scene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="MechaDiesel_Label" type="Label" parent="."]
+margin_left = 60.0
+margin_top = 116.0
+margin_right = 1214.0
+margin_bottom = 341.0
+custom_fonts/font = SubResource( 1 )
+text = "MechaDiesel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 356.0
+margin_right = 1250.0
+margin_bottom = 835.0
+custom_fonts/font = SubResource( 2 )
+text = "A game made by a small team who do not know what they are doing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 372.0
+margin_top = 444.0
+margin_right = 907.0
+margin_bottom = 644.0
+custom_fonts/font = SubResource( 3 )
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
